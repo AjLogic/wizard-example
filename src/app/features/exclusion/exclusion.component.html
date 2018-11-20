@@ -1,0 +1,21 @@
+<form #exclusionForm="ngForm" class="editForm" novalidate>
+  <div class="tab-pane fade in active">
+    <br/>
+      <div class='row'>
+          <div class='col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10'>
+              <div class="form-group">
+                  <label class="control-label" for="ingender">exclude value For gender</label>  
+                  <input class="form-control input-md" #includeValueForGender="ngModel" required id="encludeValueForGender" name="encludeValueForGender" type="text" placeholder="exclude values For gender" [(ngModel)]="exclusion.encludeValueForGender">
+                  <div class="alert alert-danger" [hidden]="encludeValueForGender.valid">values</div>
+              </div>   
+              
+          </div>
+
+          <div class="form-group text-center">
+              <button class="btn btn-outline-rounded btn-default" (click)="goToPrevious(exclusionForm)"> <span style="margin-right:10px;" class="glyphicon glyphicon-arrow-left"></span> Previous</button>
+              <button class="btn btn-outline-rounded btn-info" [disabled]="!includeForm.valid" (click)="goToNext(exclusionForm)"> Next <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+          </div>
+      </div>
+  
+  </div>
+</form>
